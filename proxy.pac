@@ -2,7 +2,6 @@ function FindProxyForURL(url, host)
 {
 // variable strings to return
 
-//var proxy = "PROXY 65.197.201.77:80";  	//new as of 12/15/12   65.197.201.77 
 var proxy = "PROXY 162.246.76.250:80";  	//new as of 12/14/17 alternate
 
 var proxy_no   = "DIRECT";
@@ -15,7 +14,6 @@ if (shExpMatch(url, "http://10.63.52.152*")) {return proxy;}
 if (shExpMatch(url, "http://10.63.52.158*")) {return proxy;}
 if (shExpMatch(url, "http://10.63.52.164*")) {return proxy;}
 if (shExpMatch(url, "http://10.63.54.31*")) {return proxy;}
-
 
 // HUGE TEST SERVERS BY IP (WORKS)
 if (shExpMatch(url, "http://10.63.53.152*")) {return proxy;}
@@ -54,15 +52,8 @@ if (shExpMatch(url, "http://pswebp41:8888/*")) {return proxy;}
 if (shExpMatch(url, "https://pswebp41.tms.toyota.com*")) {return proxy;}   
 if (shExpMatch(url, "http://pswebp41.tms.toyota.com:8888/*")) {return proxy;}  
 
-// HUGE DEV SERVERS BY DOMAIN NAME (DOESN'T WORK)
-// if (shExpMatch(url, "http://vmtlwebd31.tms.toyota.com/*")) {return proxy;}
-// if (shExpMatch(url, "http://vmtlwebd32.tms.toyota.com/*")) {return proxy;}
-// if (shExpMatch(url, "http://vmtlwebd33.tms.toyota.com/*")) {return proxy;}
 
 // HUGE TEST SERVERS BY DOMAIN NAME (DOESN'T WORK)
-// if (shExpMatch(url, "http://vmtlwebt31.tms.toyota.com/*")) {return proxy;}
-// if (shExpMatch(url, "http://vmtlwebt32.tms.toyota.com/*")) {return proxy;}
-// if (shExpMatch(url, "http://vmtlwebt33.tms.toyota.com/*")) {return proxy;}
 if (shExpMatch(url, "http://vmtlwebd31-proxy.tms.toyota.com/*")) {return proxy;}
 if (shExpMatch(url, "http://vmtlwebd32-proxy.tms.toyota.com/*")) {return proxy;}
 if (shExpMatch(url, "http://vmtlwebd33-proxy.tms.toyota.com/*")) {return proxy;}
@@ -74,11 +65,8 @@ if (shExpMatch(url, "*jvm2.vmtlwebt31*")) {return proxy;}
 // New AWS servers
 if (shExpMatch(url, "*aws.toyota*")) {return proxy;}
 if (shExpMatch(url, "*aws.lexus*")) {return proxy;}
-
 if (shExpMatch(url, "*tstcpd31.lexus.com*")) {return proxy;}
-
 if (shExpMatch(url, "*registration.toyota.com*")) {return proxy;}
-
 if (shExpMatch(url, "*tmna-lcom*.azurewebsites*")) {return proxy;}
 if (shExpMatch(url, "*tmna-lexus*.azurewebsites*")) {return proxy;}
 
