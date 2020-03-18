@@ -49,6 +49,9 @@ function FindProxyForURL(url, host) {
     if (shExpMatch(url, "*scn.lexus*")) {
         return proxy;
     }
+    if (shExpMatch(url, "*scp.lexus*")) {
+        return proxy;
+    }
     if (shExpMatch(url, "*tstcpd31.lexus.com*")) {
         return proxy;
     }
