@@ -64,6 +64,9 @@ function FindProxyForURL(url, host) {
     if (shExpMatch(url, "*tmna-lexus*.azurewebsites*")) {
         return proxy;
     }
+    if (shExpMatch(url, "*dev-lcom-smartpath.s3.amazonaws*")) {
+        return proxy;
+    }
 
     // bypass proxy for anything else
     return proxy_no;
