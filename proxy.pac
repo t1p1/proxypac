@@ -67,6 +67,9 @@ function FindProxyForURL(url, host) {
     if (shExpMatch(url, "*dev-lcom-smartpath.s3.amazonaws*")) {
         return proxy;
     }
+    if (shExpMatch(url, "*dev-test-ip-whitelist.s3-website-us-west-1.amazonaws*")) {
+        return proxy;
+    }
 
     // bypass proxy for anything else
     return proxy_no;
