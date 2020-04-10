@@ -4,7 +4,7 @@ function FindProxyForURL(url, host) {
   var proxy = "PROXY 162.246.76.250:80"; //new as of 12/14/17 alternate
   var proxy_no = "DIRECT";
 
-  if (shExpMatch(url, "*aem-qa.lexus.com/")) {
+  if (shExpMatch(url, "*aem-qa.lexus.com/*")) {
     return "PROXY 3.12.161.180:80";
   }
 
