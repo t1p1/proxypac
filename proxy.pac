@@ -4,8 +4,14 @@ function FindProxyForURL(url, host) {
   var proxy = "PROXY 162.246.76.250:80"; //new as of 12/14/17 alternate
   var proxy_no = "DIRECT";
 
+  // AWS AEM instance
   if (shExpMatch(url, "*aem-qa.lexus.com/*")) {
     return "PROXY 3.12.161.180:80";
+  }
+  
+  // AEM AEM Authoring
+  if (shExpMatch(url, "*aem-author-qa.lexus.com/*")) {
+    return "PROXY 3.12.161.180:4502";
   }
 
   if (shExpMatch(url, "http://pswebp41:8888/*")) {
