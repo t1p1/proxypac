@@ -80,7 +80,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(url, "*dev-lcom-smartpath.s3.amazonaws*")) {
       return proxy;
   }
-  if (shExpMatch(url, "*jenkins.tmna-devops.com*")) {
+  if (shExpMatch(url, "*tmna-devops.com*")) {
       return proxy;
   }
   
