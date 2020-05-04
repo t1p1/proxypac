@@ -9,6 +9,11 @@ function FindProxyForURL(url, host) {
     return "PROXY 3.12.161.180:80";
   }
   
+  // Prevent proxy on production handraiser url
+  if (shExpMatch(url, "*www.handraisers.tms.aws.toyota.com/*")) {
+    return proxy_no;
+  }
+  
   // AEM AEM Authoring
   if (shExpMatch(url, "*aem-author-qa.lexus.com/*")) {
     return "PROXY 3.12.161.180:4502";
