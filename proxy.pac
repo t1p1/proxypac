@@ -84,7 +84,7 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(url, "*tmna-devops.com*")) {
       return proxy;
   }
-  if (shExpMatch(url, "*preproduction-cloud.private.repos*")) {
+  if (shExpMatch(url, "*s3.amazonaws.com*")) {
       return proxy;
   }
   
