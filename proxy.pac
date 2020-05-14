@@ -84,6 +84,9 @@ function FindProxyForURL(url, host) {
   if (shExpMatch(url, "*tmna-devops.com*")) {
       return proxy;
   }
+  if (shExpMatch(url, "*preproduction-cloud.private.repos*")) {
+      return proxy;
+  }
   
   // bypass proxy for anything else
   return proxy_no;
