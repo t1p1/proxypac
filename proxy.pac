@@ -4,14 +4,18 @@ function FindProxyForURL(url, host) {
   var proxy = "PROXY 162.246.76.250:80"; //new as of 12/14/17 alternate
   var proxy_no = "DIRECT";
   
+  // Prevent proxy on production handraiser url
+  if (shExpMatch(url, "*.handraisers.tms.aws.toyota.com/*")) {
+    return proxy_no;
+  }
+  
+  if (shExpMatch(url, "*next.ws.tms.aws.toyota.com/etcc/sendETMail*")) {
+    return proxy_no;
+  }
+  
   // AWS AEM instance
   if (shExpMatch(url, "*aem-qa.lexus.com/*")) {
     return "PROXY 3.12.161.180:80";
-  }
-  
-  // Prevent proxy on production handraiser url
-  if (shExpMatch(url, "*www.handraisers.tms.aws.toyota.com/*")) {
-    return proxy_no;
   }
   
   // AEM AEM Authoring
