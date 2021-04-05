@@ -5,7 +5,7 @@ function FindProxyForURL(url, host) {
   var proxy_no = "DIRECT";
 
   // Prevent proxy on new legacy gitlab
-  if (shExpMatch(url, "repo.tms.aws.toyota.com/*")) {
+  if (shExpMatch(url, "*repo.tms.aws.toyota.com/*")) {
     return proxy_no;
   }
   
